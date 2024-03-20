@@ -23,7 +23,15 @@ font-size:xx-large;}
     height: 0%;
 }
 .navbar{
-position:sticky !important;
-top :0 !important;
-z-index:50;
-height:100px;}
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50;
+    height: 150px;
+}
+.navbar-nav{
+    margin: auto;
+    margin-top: 100px;
+}
+.nav-link{
+    padding-right: 50px !important;
+}
