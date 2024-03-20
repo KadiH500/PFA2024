@@ -22,3 +22,8 @@ font-size:xx-large;}
     width: 300px;
     height: 0%;
 }
+.navbar{
+position:sticky !important;
+top :0 !important;
+z-index:50;
+height:100px;}
