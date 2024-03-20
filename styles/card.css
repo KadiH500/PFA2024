@@ -1,0 +1,12 @@
+.container-card{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#button{
+    margin: 13px;
+    padding: 13px;
+    border-radius:13px;
+
+}
