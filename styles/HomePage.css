@@ -1,156 +1,230 @@
-.first-container { /*mta3 taswira lkalba lmahabtech terkah*/
-    position: relative;
-    text-align: center; 
-  }
-  
-  .header-pic {
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
 
-    width: 100%; 
-  height: 200px; 
+.container-introduction {
+  position: relative;
+  text-align: center;
+}
+
+.header-pic {
+  width: 100%;
+  height: 200px;
   display: block;
-  margin: 0 auto; 
-  }
-  
-  #header-style {
-    position: absolute;
-    top: 50%;
-    margin-left:400px;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-    
-  }
-  
-  
-.container-card{
-    display: flex;
-     justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
+  margin: 0 auto;
 }
-.card{
-    margin-left: 15px;
-    margin-top: 15px;
+
+#header-style {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
+
 }
-#header-style{
-    text-align: center;
-font-style:oblique;
-font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-font-size:xx-large;}
+
+
+.container-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+#header-style {
+  text-align: center;
+  font-style: oblique;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+}
+
 .pic-style {
-    display: flex;
-    justify-content: space-around; 
-    align-items: center; 
-    background-color: rgb(248, 221, 232);
-  }
-  .picture{
-    margin-left: 200px;
-  }
-  
-  .pic-style figure {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  .pic-style .picture {
-    max-width: 100%; /* Pour que les images s'ajustent correctement */
-    height: auto; /* Pour conserver le rapport hauteur/largeur des images */
-    display: block;
-  }
-  
-.navbar{
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 50;
-    height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(248, 221, 232);
 }
-.navbar-nav{
-    margin: auto;
-    margin-top: 100px;
+
+.picture {
+  margin-left: 200px;
 }
-.nav-link{
-    padding-right: 50px !important;
+
+.pic-style figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
-.figcaption{
-    color: black;
-    font-size: x-large;
-    font-style: inherit;
-    margin-bottom: 50px;
+
+.pic-style .picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-.blue-flower{
-    position: fixed;
-    left: 0;
-    right: 0;
-    margin: auto;
-    bottom: 0;
-    max-width: 100%;
-    height: auto;
-    transform: translateX(-50%);
+.figcaption {
+  color: black;
+  font-size: x-large;
+  font-style: inherit;
+  margin-bottom: 50px;
 }
-.title{
-    margin-top: 10px;
-    color: rgb(0, 0, 0);
-    font-style: normal;
-    font-family: "Heldane Display", sans-serif;
-    font-size: 25px;
-    line-height: 1.14px;
+
+.blue-flower {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  max-width: 100%;
+  height: auto;
+  transform: translateX(-50%);
 }
+
+.title {
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  font-style: normal;
+  font-family: "Heldane Display", sans-serif;
+  font-size: 25px;
+  line-height: 1.14px;
+}
+
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 5%; /* Ajustez la hauteur selon vos besoins */
-  }
-  
-  .blue-flowers {
-    width: 100px; /* Étaler l'image sur toute la largeur */
-    height: auto; /* Maintenir le ratio hauteur/largeur */
-  }
-  
-  .jumbotron {
-    background-image: url('/imgs/BlockBrand.avif');
-    background-size:cover;
-    background-position: center;
-    color: rgb(0, 0, 0);
-    width:auto;
-    max-width: 450px;
-    /* height:300px; */
-    padding-top: 10px;
-    text-align: center;
-    border: 2px solid #cc4343; /* Ajouter une bordure de 2 pixels avec une couleur blanche */
-    border-radius: 100px; /* Ajouter un rayon de bordure */
-  margin: auto;}
- 
-.user-pic{
-    width: 30px;
-    object-fit: cover;
-    mix-blend-mode: darken;
-    margin-bottom: 100px;
-    margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 5%;
 }
-.nav-item{
-    font-size:larger;
-    font-style:initial;
+
+.blue-flowers {
+  width: 100px;
+  height: auto;
 }
-.dropdown {
-    position:relative;
-    display: inline-block;
+.jumbotron{
+  position: relative;
+}
+
+.jumbotron-img{
+  width: 100%;
+}
+
+.picture-intro {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  mix-blend-mode: darken;
+  margin-bottom: 100px;
+}
+.navbar {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto;
+  font-size: 1.5rem;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  margin-left: 65vh;
+}
+
+.menu li {
+  margin-right: 50px;
+  font-size: 18px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu li.dropdown {
+  position: relative;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color:#F0F0F0;
-    min-width: 100px;
-    padding: 12px 16px;
-    z-index: 1;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width:100px;
+  border-radius: 10px;
 }
 
-.dropdown-trigger:hover + .dropdown-content {
-    display: block;
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+.dropdown-content a:hover{
+  background-color: #cccccc4c;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-  
-  
+.search-bar {
+  margin-left: 20px;
+}
+
+.search-bar input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-icon,
+.cart-icon {
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+
+.container-nav {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+}
+.content-jumbotron{
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  background-color: white;
+  z-index: 50;
+  width: 300px;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
