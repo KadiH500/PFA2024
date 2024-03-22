@@ -72,7 +72,8 @@
   color: black;
   font-size: x-large;
   font-style: inherit;
-  margin-bottom: 50px;
+  margin:20px;
+  font-family:cursive;
 }
 
 .blue-flower {
@@ -88,9 +89,9 @@
 
 .title {
   margin-top: 10px;
-  color: rgb(0, 0, 0);
+  color:rgb(184, 140, 91);
   font-style: normal;
-  font-family: "Heldane Display", sans-serif;
+  font-family:cursive;
   font-size: 25px;
   line-height: 1.14px;
 }
@@ -227,4 +228,29 @@
   padding: 15px;
   border: 1px solid gray;
   border-radius: 10px;
+}
+.boutton{
+  background-color:transparent;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 100px;
+  text-decoration: none;
+  border-color:#ccc;
+  
+}
+.text-decoration{
+  text-decoration: none;
+  font-size: larger;
+font-style:initial;
+font-family:cursive;
+color:#d6a4d2;}
+.my-4{
+  margin-top: 10px;
+}
+.lead{
+  font-family: cursive;
+}
+.display-4{
+  font-family: cursive;
+  color: #a59da3;
 }
