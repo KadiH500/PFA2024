@@ -124,11 +124,11 @@
   margin-bottom: 100px;
 }
 .navbar {
-  background-color: #f8f9fa;
-  padding: 10px 0;
+  background-color:rgb(255, 255, 255);
   position: sticky;
-  top: 0;
-  z-index: 50;
+  top:0;
+  z-index: 60;
+  height: 95px;
 }
 
 .container {
@@ -136,15 +136,17 @@
   align-items: center;
 }
 
-.logo {
+/* .logo {
   margin-right: auto;
   font-size: 1.5rem;
-}
+} */
 
 .menu {
   list-style-type: none;
   display: flex;
-  margin-left: 65vh;
+  margin: right 0;;
+  background-color:white;
+  margin-top: 0cm;
 }
 
 .menu li {
@@ -187,22 +189,23 @@
 }
 
 .search-bar {
-  margin-left: 20px;
+  margin-left:1px;
+  margin-bottom: 10px;
 }
 
 .search-bar input[type="text"] {
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 100px;
   outline: none;
 }
 
 .search-bar button {
   padding: 8px 12px;
-  background-color: #333;
-  color: #fff;
+  background-color: transparent;
+  color: grey;
   border: none;
-  border-radius: 4px;
+  border-radius: 100px;
   cursor: pointer;
 }
 
@@ -213,9 +216,11 @@
 }
 
 .container-nav {
+  background-color:white;
   display: flex;
-  width: 95%;
-  justify-content: space-between;
+  /* margin-bottom: 0cm; */
+    /* justify-content: space-around; */
+  margin-bottom: 50px;
 }
 .content-jumbotron{
   position: absolute;
@@ -253,4 +258,16 @@ color:#d6a4d2;}
 .display-4{
   font-family: cursive;
   color: #a59da3;
+}
+.logo{
+  width:500px;
+}
+.user-pic-container{
+  display: flex;
+  justify-content: flex-end;
+  height:43px;
+}
+.user-pic{
+  margin-right:20px;
+  margin-top:20px;
 }
