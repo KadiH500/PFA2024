@@ -1,8 +1,10 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
-}
+  /* font-family: "Roboto", sans-serif; */
+  text-align: center;
+  font-size: medium;
+  }
 
 .container-introduction {
   position: relative;
@@ -258,6 +260,7 @@ color:#d6a4d2;}
 .display-4{
   font-family: cursive;
   color: #a59da3;
+  font-size:x-large;
 }
 .logo{
   width:500px;
@@ -268,6 +271,22 @@ color:#d6a4d2;}
   height:43px;
 }
 .user-pic{
+
   margin-right:20px;
   margin-top:20px;
+}
+.header-style{
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family:Georgia, 'Times New Roman', Times, serif ;
+  color: rgb(141, 122, 122);
+}
+.line{
+  border: 1px solid rgb(49, 134, 120);
+  margin: 40px;
+}
+.border-line{
+  border:1px solid rgb(49, 134, 120);
+  margin: 20px 600px;
 }
