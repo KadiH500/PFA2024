@@ -20,6 +20,9 @@
 
 
 <body>
+  <div  id="home">
+
+  </div>
   <nav class="navbar">
     <div class="container">
       <div>
@@ -27,14 +30,15 @@
       </div>
       <div class="container-nav">
         <ul class="menu">
-          <li><a href="#">Acceuil</a></li>
-          <li><a href="#">Anniversaire</a></li>
-          <li><a href="#">Saint valentin</a></li>
-          <li><a href="#">Mariage</a></li>
-          <li><a href="#">Félicitations</a></li>
-          <li><a href="#">Fleurs séchées</a></li>
-          <li><a href="#">Plantes</a></li>
-          
+          <li onclick="smoothScroll('#home')"> <a href="##">Acceuil</a></li>
+          <li onclick="smoothScroll('#anniversaire')"> <a href="##">Anniversaire</a></li>
+          <li onclick="smoothScroll('#valentine')"> <a href="##">Saint valentin</a></li>
+          <li onclick="smoothScroll('#mariage')"> <a href="##">Mariage</a></li>
+          <li onclick="smoothScroll('#felicitations')"> <a href="##">Félicitations</a></li>
+          <li onclick="smoothScroll('#dryflowers')"> <a href="##">Fleurs séchées</a></li>
+          <li onclick="smoothScroll('#plantes')"> <a href="##">Plantes</a></li>
+          <li onclick="smoothScroll('#decoration')"> <a href="##">Décoration</a></li>
+
         </ul>
         <div class="box">
           <input type="text" placeholder="Recherche...">
@@ -42,19 +46,13 @@
  <i class="fas fa-search"></i>
           </a>
         </div>
-        <!-- <div style="display: flex;">
-          <div class="search-bar">
- <input type="text" placeholder="Recherche">
- <button  type="submit"><i class="fa fa-search"></i></button >
-          </div>
-         <div class="user-icon"><i class="fa fa-user"></i></div>
-          <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div> -->
+  
         </div>
         
       </div>
     </div>
     <div class="user-pic-container">
-    <a href="#"><img class="user-pic" src="/imgs/profil.png" alt=""></a>
+    <a href="/login signup/Untitled-1.html"><img class="user-pic" src="/imgs/profil.png" alt=""></a>
         <a href="#"><img  class="user-pic" src="/imgs/panier.png" alt=""></a>
       </div>
   </nav>
@@ -62,9 +60,12 @@
     <div class="container-introduction">
       <img class="picture-intro" src="/imgs/footerpic.PNG" alt="">
     </div>
+    
   </section>
-  <p class="wedding-collection">Des fleurs pour chaque occasion, des sourires pour chaque moment !</p> 
-  <div class="container-card">
+  <section id="anniversaire">
+  <p  class="wedding-collection">Des fleurs pour chaque occasion, des sourires pour chaque moment !</p> 
+
+<div class="container-card">
     <div class="card" >
       <img class="card-img-top" class="user-p" src="/styles/Anniversary pics/Joyeux anniversaire.avif" alt="" />
       <div class="card-body">
@@ -136,8 +137,7 @@
       </div>
     </div>
     <div class="card" >
-      <!--       
-          </div>style="width: 18rem"> -->
+
  <img class="card-img-top" class="user-p" src="/styles/Anniversary pics/Petit bonheur.avif" alt="" />
  <div class="card-body">
    <h5 class="card-title">Petit Bonheur</h5>
@@ -147,6 +147,7 @@
    <button class="boutton"><a class="card-caption" href="#">Ajouter au panier</a></button >
  </div>
           </div>
+</section>
     <div class="pic-style">
       <figure>
         <img class="picture" class="user-p" src="/imgs/1st.avif" alt="">
@@ -173,11 +174,10 @@
         </figcaption>
       </figure>
     </div>
-    <div >
+    <section id="valentine" >
       <p class="wedding-collection">
         Arrosez votre amour et regardez-le éclore avec noc plantes
       </p>
-    </div>
     <div class="container-card">
       <div class="card" >
           <img class="card-img-top" class="user-p" src="/valentine/Bisous.avif" alt="" />
@@ -247,7 +247,7 @@
   </div>
  
     </div>
-    <div>
+    <div id="mariage">
      <p class="wedding-collection"> Élégance incarnée:<br> nos bouquets, votre empreinte</p>
      <div class="container-card">
       <div class="card" >
@@ -318,7 +318,7 @@
   </div>
     </div>
     </div>
-    <div>
+    <div id="felicitations">
       <p class="wedding-collection">
         Des félicitations en fleurs, rien de plus radieux
       </p>
@@ -384,14 +384,16 @@
           Parce que le meilleur moment pour s'envoyer des fleurs, c'est toute l'année</p>
         <hr class="my-4">
         <p class="lead">
-          <button  class="boutton"><a class="text-decoration" href="#">En savoir plus</a></button >
+          <button  class="boutton"><a class="text-decoration" href="/login signup/Untitled-1.html">En savoir plus</a></button >
         </p>
       </div>
     </div>
     </div>
+    <div id="dryflowers">
+      <p class="wedding-collection">Fleurs séchées, le charme qui perdure</p></div>
+    <section class="container-card">
     <div class="card" >
-      <!--       
-          </div>style="width: 18rem"> -->
+    
  <img class="card-img-top" class="user-p" src="/dryflower/Golden light 30.avif" alt="" />
  <div class="card-body">
    <h5 class="card-title">Golden light</h5>
@@ -402,8 +404,7 @@
  </div>
           </div> 
           <div class="card" >
- <!--       
-     </div>style="width: 18rem"> -->
+
 <img class="card-img-top" class="user-p" src="/dryflower/Blue dream 35.avif" alt="" />
 <div class="card-body">
   <h5 class="card-title">Blue dream</h5>
@@ -434,8 +435,7 @@
  </div>
     </div>
     <div class="card" >
- <!--       
-     </div>style="width: 18rem"> -->
+ 
 <img class="card-img-top" class="user-p" src="/dryflower/Pampa Mood 30.avif" alt="" />
 <div class="card-body">
   <h5 class="card-title">Pampa Mood</h5>
@@ -446,8 +446,7 @@
 </div>
      </div>
      <div class="card" >
-<!--       
-</div>style="width: 18rem"> -->
+
   <img class="card-img-top" class="user-p" src="/dryflower/Pink fantasy 45.avif" alt="" />
   <div class="card-body">
     <h5 class="card-title">Pink fantasy</h5>
@@ -457,6 +456,7 @@
     <button class="boutton"><a class="card-caption" href="#">Ajouter au panier</a></button >
   </div>
 </div>
+<!-- </section> -->
 
     <div class="pic-style">
       <figure>
@@ -482,6 +482,7 @@
         </figcaption>
       </figure>
     </div>
+    <div id="plantes"></div>
     <div class="container-card">
       <div class="card" >
    <img class="card-img-top" class="user-p" src="/Plantes/Anthurium.avif" alt="" />
@@ -575,9 +576,30 @@
     </div>
      </div>
  </div>
+ <div id="decoration">
+  <p class="wedding-collection">Empruntez des idées captivantes pour votre décoration</p>
+ </div>
+ <div class="container-card">
+  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.29 PM.mp4" controls></video>
+  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.30 PM (1).mp4" controls></video>
+  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.30 PM.mp4" controls></video>
+  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.31 PM (1).mp4" controls></video>
+  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.31 PM.mp4" controls></video>
+  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.32 PM (1).mp4" controls></video>
+  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.32 PM.mp4"controls></video>
+</div>
  <footer>
   <div class="footer-content">
-<p> À propos <br>Chez Jasminet, nous sommes bien plus qu'une simple boutique de fleurs en ligne. Nous sommes des passionnés de la nature et des artisans dévoués à créer des expériences florales exceptionnelles pour nos clients. Avec notre engagement indéfectible envers la qualité, nous sélectionnons soigneusement chaque fleur pour assurer une fraîcheur et une beauté incomparables. Forts de notre expertise dans l'industrie florale et de notre créativité sans limites, nous concevons des arrangements floraux uniques qui captivent et émerveillent. Nous croyons en la responsabilité environnementale et nous nous efforçons de promouvoir des pratiques durables dans tout ce que nous faisons. Nous sommes fiers de servir notre communauté et de contribuer à rendre chaque occasion spéciale encore plus mémorable. Chez [Nom de votre entreprise], nous trouvons l'inspiration dans la nature et nous sommes honorés de partager cette inspiration avec vous à travers nos magnifiques créations florales
+<p> À propos <br>Chez Jasminet, nous sommes bien plus qu'une simple boutique de fleurs en ligne. 
+  Nous sommes des passionnés de la nature et des artisans dévoués à créer des expériences florales 
+  exceptionnelles pour nos clients. Avec notre engagement indéfectible envers la qualité, 
+  nous sélectionnons soigneusement chaque fleur pour assurer une fraîcheur et une beauté incomparables.
+   Forts de notre expertise dans l'industrie florale et de notre créativité sans limites,
+    nous concevons des arrangements floraux uniques qui captivent et émerveillent. Nous 
+    croyons en la responsabilité environnementale et nous nous efforçons de promouvoir
+     des pratiques durables dans tout ce que nous faisons. Nous sommes fiers de servir
+      notre communauté et de contribuer à rendre chaque occasion spéciale encore plus mémorable. 
+      Chez Jasminet, nous trouvons l'inspiration dans la nature et nous sommes honorés de partager cette inspiration avec vous à travers nos magnifiques créations florales
 </p> 
 </div> 
 <div class="footer-content"> 
@@ -594,17 +616,17 @@
 <div class="footer-content">
   <p> Rejoignez-nous</p>
     <ul class="social-icons">
-      <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-      <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-      <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-      <li><a href="#" title="Instagram"><i class="fab fa-linkedin"></i></a></li>
-      <li><a href="#" title="Instagram"><i class="fab fa-tiktok"></i></a></li>
-      <li><a href="#" title="Instagram"><i class="fab fa-youtube"></i></a></li>
+      <li><a href="#" title="Facebook" ><i class="fab fa-facebook-f"></i></a>
+      <li><a href="#" title="Twitter" class="twitter"><i class="fab fa-twitter"></i></a>
+      <li><a href="#" title="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
+      <li><a href="#" title="Linkedin" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      <li><a href="#" title="TikTok" class="tiktok"><i class="fab fa-tiktok"></i></a>
+      <li><a href="#" title="YouTube" class="youtube"><i class="fab fa-youtube"></i></a>
 
-      <!-- Add more social icons as needed -->
     </ul>
   </div>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="/styles/index.js" defer></script>
 
 </footer>
 </body>
