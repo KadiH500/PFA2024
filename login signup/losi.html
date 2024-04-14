@@ -12,6 +12,9 @@
     <form id="container" method="post" class="container" action="test.php">
 		<!-- FORM SECTION -->
 		<div class="row">
+			<div id="error-container">
+				
+			</div>
 			<!-- SIGN UP -->
 			<div class="col align-items-center flex-col sign-up">
 				<div class="form-wrapper align-items-center">
@@ -33,6 +36,12 @@
 							<i class='bx bxs-lock-alt'></i>
 							<input type="password" placeholder="Confirmez votre Mot de passe" name="password">
 						</div>
+						<select name="role">
+					<option selected value="acheteur">acheteur</option>
+					<option value="fleuriste">fleuriste</option>
+				</select>
+				<br>
+				<br>
 						<button>
 							Valider
 						</button>
@@ -49,18 +58,23 @@
 			
 			</div>
 			<!-- END SIGN UP -->
+
+
+			
+
 			<!-- SIGN IN -->
 			<div class="col align-items-center flex-col sign-in">
 				<div class="form-wrapper align-items-center">
 					<div class="form sign-in">
+						
 						<div class="input-group">
 							<i class='bx bxs-user'></i>
-							<input type="hidden" name="form_type" value="signin">
-							<input type="text" placeholder="Nom d'utilisateur" >
+							<input type="hidden" name="signin">
+							<input type="text" placeholder="Nom d'utilisateur" name="user" >
 						</div>
 						<div class="input-group">
 							<i class='bx bxs-lock-alt'></i>
-							<input type="password" placeholder="Mot de passe" >
+							<input type="password" placeholder="Mot de passe" name="pw" >
 						</div>
 						<button>
 							Valider
