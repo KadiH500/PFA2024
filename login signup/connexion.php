@@ -6,9 +6,9 @@ $dbname = 'fleuriste'; // nom database
 
 
 try {
-    $connexion = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
-    $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
     echo "Connexion réussie à la base de données.<br>";
