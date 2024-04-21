@@ -10,8 +10,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $adresse = $_POST['adresse'] ?? '';
     $codepostal = $_POST['codepostal'] ?? '';
     $phone = $_POST['phone'] ?? '';
+    if (isset($_POST['edituser'])) {
 
-    $sql = "INSERT INTO users (username, name, email, bio, ville, adresse, codepostal, phone)
+
+    }
+    else if (isset($_POST['editpassword'])) {
+
+
+
+    }
+    else if (isset($_POST['editinfo'])) {
+        
+        
+        
+        
+    }$sql = "INSERT INTO users (username, name, email, bio, ville, adresse, codepostal, phone)
     VALUES ('$username', '$name', '$email', '$bio', '$ville', '$adresse', '$codepostal', '$phone')";
 
 
