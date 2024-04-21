@@ -10,6 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $adresse = $_POST['adresse'] ?? '';
     $codepostal = $_POST['codepostal'] ?? '';
     $phone = $_POST['phone'] ?? '';
+    $oldpass=$_POST['ogpassword'] ?? '';
+    $newpass1=$_POST['password1'] ?? '';
+    $newpass2=$_POST['password2'] ?? '';
     if (isset($_POST['edituser'])) {
 
 

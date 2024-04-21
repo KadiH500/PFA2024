@@ -11,7 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Process sign-up form
             $username = $_POST['username'];
             $email = $_POST['email'];
-            $password = $_POST['password'];
+            $password = $_POST['password1'];
+            $password=$_POST['password2'];
             $role=$_POST['role'];
 
              // Regex patterns for validation
@@ -19,6 +20,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $email_pattern = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"; // Email pattern
             $password_pattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/"; // Minimum 8 characters, at least one uppercase letter, one lowercase letter, and one number
 
+
+            //validating password
+
+            if ($password1 === $password2) {
+                echo "Passwords match!";
+                // Proceed with your logic (e.g., save the password, update database, etc.)
+            } else {
+                echo "Passwords do not match. Please try again.";
+            }
+            
             // Validate input using regex
             
                 $check_query = "SELECT * FROM signup WHERE username='$username' OR email='$email'";
