@@ -78,7 +78,7 @@
 <div class="main">
   <section>
     <div class="container-introduction">
-      <img class="picture-intro" src="/imgs/footerpic.PNG" alt="">
+      <img class="picture-intro" src="../imgs/footerpic.PNG" alt="">
     </div>
     
   </section>
@@ -95,7 +95,7 @@
 </section>
     <div class="pic-style">
       <figure>
-        <img class="picture" class="user-p" src="/imgs/1st.avif" alt="">
+        <img class="picture" class="user-p" src="../imgs/1st.avif" alt="">
         <h1 class="title">Satisfait, ou relivré</h1>
         <figcaption class="figcaption"> La plante ou le bouquet reçu n'est pas conforme à votre commande ?
           <br>Nous re-livrons gratuitement et avec toutes nos excuses !
