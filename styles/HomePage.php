@@ -8,8 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/styles/HomePage.css" />
-  <link rel="shortcut icon" type="x-icon" href="/imgs/logo Icon.png">
+  <link rel="stylesheet" href="./HomePage.css" />
+  <link rel="shortcut icon" type="x-icon" href="../imgs/logo Icon.png">
   <title>Jasminet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,12 +17,12 @@
  <script src="https://kit.fontawesome.com/c8fce84889.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <?php include 'includes/getstock.inc.php';
+  <?php include './includes/getstock.inc.php';
     session_start(); ?>
   <nav class="navbar">
     <div class="container">
       <div>
-        <img class="logo" src="/imgs/navbarlogo.jpeg" alt="">
+        <img class="logo" src="../imgs/navbarlogo.jpeg" alt="">
       </div>
       <div class="container-nav">
         <ul class="menu">
@@ -48,10 +48,10 @@
       </div>
     </div>
     <div class="shopping-bag">
-    <a href="/login signup/losi.html"><img class="user-pic" src="/imgs/profil.png" alt=""></a>
+    <a href="../login signup/losi.html"><img class="user-pic" src="../imgs/profil.png" alt=""></a>
     
                 <a href="./cart.html">
-                    <img src="/imgs/panier.png" alt="cart">
+                    <img src="../imgs/panier.png" alt="cart">
                     Cart
                     <div class="total-items-in-cart"></div>
                 </a>
@@ -71,7 +71,7 @@
                     Subtotal (0 items): $0
                 </div>
                 <div class="checkout">
-                  <a href="/login signup/losi.html">Proceed to checkout</a>
+                  <a href="../login signup/losi.html">Proceed to checkout</a>
                 </div>
         </div>
     </div>
@@ -102,7 +102,7 @@
         </figcaption>
       </figure>
       <figure>
-        <img class="picture" class="user-p" src="/imgs/2nd.avif" alt="">
+        <img class="picture" class="user-p" src="../imgs/2nd.avif" alt="">
 
         <h1 class="title">Création par un artisan fleuriste.</h1>
         <figcaption class="figcaption"> Un service de qualité,
@@ -110,7 +110,7 @@
         </figcaption>
       </figure>
       <figure>
-        <img class="picture" class="user-p" src="/imgs/3rd.avif" alt=".">
+        <img class="picture" class="user-p" src="../imgs/3rd.avif" alt=".">
 
         <h1 class="title">Partout, tout le temps</h1>
         <figcaption class="figcaption"> Parce qu’une envie de fleurs n’attend pas,
@@ -146,7 +146,7 @@
           Parce que le meilleur moment pour s'envoyer des fleurs, c'est toute l'année</p>
         <hr class="my-4">
         <p class="lead">
-          <button  class="boutton"><a class="text-decoration" href="/login signup/losi.html">En savoir plus</a></button >
+          <button  class="boutton"><a class="text-decoration" href="../login signup/losi.html">En savoir plus</a></button >
         </p>
       </div>
     </div>
@@ -161,13 +161,13 @@
 
     <div class="pic-style">
       <figure>
-        <img class="picture" class="user-p" src="/imgs/p1.avif" alt="">
+        <img class="picture" class="user-p" src="../imgs/p1.avif" alt="">
         <h1 class="title">Plantes choisies avec soin</h1>
         <figcaption class="figcaption"> pour leur qualité et leur fraîcheur, auprès de producteurs labellisés en Tunisie.
         </figcaption>
       </figure>
       <figure>
-        <img class="picture" class="user-p" src="/imgs/p2.avif" alt="">
+        <img class="picture" class="user-p" src="../imgs/p2.avif" alt="">
 
         <h1 class="title">Une collection de cache-pots
           </h1>
@@ -175,7 +175,7 @@
         </figcaption>
       </figure>
       <figure>
-        <img class="picture" class="user-p" src="/imgs/p3.avif" alt=".">
+        <img class="picture" class="user-p" src="../imgs/p3.avif" alt=".">
 
         <h1 class="title">Des plantes bien protégées
           </h1>
@@ -191,13 +191,13 @@
   <p class="wedding-collection">Empruntez des idées captivantes pour votre décoration</p>
  </div>
  <div class="container-card">
-  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.29 PM.mp4" controls></video>
-  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.30 PM (1).mp4" controls></video>
-  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.30 PM.mp4" controls></video>
-  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.31 PM (1).mp4" controls></video>
-  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.31 PM.mp4" controls></video>
-  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.32 PM (1).mp4" controls></video>
-  <video src="/vid/WhatsApp Video 2024-04-12 at 12.18.32 PM.mp4"controls></video>
+  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.29 PM.mp4" controls></video>
+  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.30 PM (1).mp4" controls></video>
+  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.30 PM.mp4" controls></video>
+  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.31 PM (1).mp4" controls></video>
+  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.31 PM.mp4" controls></video>
+  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.32 PM (1).mp4" controls></video>
+  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.32 PM.mp4"controls></video>
 </div>
  <footer>
   <div class="footer-content">
@@ -237,7 +237,7 @@
     </ul>
   </div>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script src="/styles/index.js" defer></script>
+  <script src="./index.js" defer></script>
 
 </footer>
 </div>
