@@ -139,7 +139,7 @@
         </div>
     </div>
     <div class="jumbotron">
-     <img  class="jumbotron-img" src="/imgs/BlockBrand.avif">
+     <img  class="jumbotron-img" src="../imgs/BlockBrand.avif">
       <div class="content-jumbotron">
         <h1 class="display-4">-5% sur votre premiére commande !</h1>
         <p class="lead">
