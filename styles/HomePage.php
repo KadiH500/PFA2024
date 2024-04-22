@@ -50,7 +50,7 @@
     <div class="shopping-bag">
     <a href="../login signup/losi.html"><img class="user-pic" src="../imgs/profil.png" alt=""></a>
     
-                <a href="./cart.html">
+                <a href="#">
                     <img src="../imgs/panier.png" alt="cart">
                     Cart
                     <div class="total-items-in-cart"></div>
