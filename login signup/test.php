@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $insert_query = "INSERT INTO signup (username , email , password , role)VALUES ('$username', '$email', '$hashed_password' , '$role')";
                 $tr=$conn->query($insert_query);
                 if ($tr) {
-                    header("location: ../styles/HomePage.html");
+                    header("location: ../styles/HomePage.php");
                 } else {
                     echo "Error:";
                 }
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $result = $conn->query($sql);
                 if ($result->rowCount() === 1) {
 
-                        header("location: ../styles/HomePage.html");
+                        header("location: ../styles/HomePage.php");
                     }else {
                         header("Location: losi.html?error=Incorect User name or password");
                     }
