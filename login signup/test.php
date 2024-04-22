@@ -15,23 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $password=$_POST['password2'];
             $role=$_POST['role'];
 
-             // Regex patterns for validation
-            $username_pattern = "/^[a-zA-Z0-9_]{3,20}$/"; // Alphanumeric with underscores, 3-20 characters
-            $email_pattern = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"; // Email pattern
-            $password_pattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/"; // Minimum 8 characters, at least one uppercase letter, one lowercase letter, and one number
-
-
-            //validating password
-
-            if ($password1 === $password2) {
-                echo "Passwords match!";
-                // Proceed with your logic (e.g., save the password, update database, etc.)
-            } else {
-                echo "Passwords do not match. Please try again.";
-            }
-            
-            // Validate input using regex
-            
+           
                 $check_query = "SELECT * FROM signup WHERE username='$username' OR email='$email'";
             $result = $conn->query($check_query);
             if ($result->rowCount() > 0) {
@@ -45,7 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $insert_query = "INSERT INTO signup (username , email , password , role)VALUES ('$username', '$email', '$hashed_password' , '$role')";
                 $tr=$conn->query($insert_query);
                 if ($tr) {
-                    header("location: ../styles/HomePage.php");
+                    if ($role === 'user') {
+                        header("Location: ../stylesuser/HomePage.php");
+                    } elseif ($role === 'admin') {
+                            header("Location: ../stylesadmin/HomePage.php");
+                        }
+        
                 } else {
                     echo "Error:";
                 }
@@ -67,12 +56,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
                 $sql = "SELECT * FROM signup WHERE username='$username' AND password='$password'";
                 $result = $conn->query($sql);
-                if ($result->rowCount() === 1) {
 
-                        header("location: ../styles/HomePage.php");
-                    }else {
-                        header("Location: losi.html?error=Incorect User name or password");
+                if ($result->rowCount() === 1) {
+                    $row = $result->fetch(PDO::FETCH_ASSOC);
+                    $role = $row['role']; // Assuming 'role' is the column in your database that stores user roles
+
+                    // Redirect users based on their role
+                    if ($role === 'user') {
+                    header("Location: ../stylesuser/HomePage.php");
+                    } elseif ($role === 'admin') {
+                        header("Location: ../stylesadmin/HomePage.php");
                     }
+    
+                } else {
+                    header("Location: losi.html?error=Incorect User name or password");
+                }
+
         
             }
             
