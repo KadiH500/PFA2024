@@ -9,20 +9,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $password = $_POST['pw'];
     
             // Fetch hashed password from the database
-            $stmt = $conn->prepare("SELECT password, role FROM signup WHERE username = ?");
+            $stmt = $conn->prepare("SELECT id ,password, role FROM signup WHERE username = ?");
             $stmt->bindParam(1, $username);
             $stmt->execute();
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
             $hashedPasswordFromDB = $result['password'];
-            $role = $result['role']; // Fetch role from the database
+            $role = $result['role'];
+            $id=$result['id'] ;
+            // Fetch role from the database
     
             if ($hashedPasswordFromDB && password_verify($password, $hashedPasswordFromDB)) {
                 // Passwords match, start a session and set session variables
                 session_start();
-                $lastInsertId = $conn->lastInsertId();
+               
 
                 $_SESSION['username'] = $username;
-                $_SESSION['id'] = $lastInsertId; // Assuming you have an auto-increment ID
+                $_SESSION['id'] = $id; // Assuming you have an auto-increment ID
                 
                 // Redirect based on role
                 if ($role === 'acheteur') {
