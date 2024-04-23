@@ -1,225 +1,221 @@
+//saint valentin
 const products = [
   {
     id: 0,
-    name: "Flower 1",
+    name: "Bisous",
     price: 29.99,
     instock: phpVar1,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f1.png",
+    imgSrc: "../valentine/Bisous.avif",
   },
   {
     id: 1,
-    name: "Flower 2",
+    name: "Fraise Vanille",
     price: 24.99,
     instock: phpVar2,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f2.png",
+    imgSrc: "../valentine/Fraise Vanille.avif",
   },
   {
     id: 2,
-    name: "Flower 3",
+    name: "Venus",
     price: 19.99,
     instock: phpVar3,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f3.png",
+    imgSrc: "../valentine/Venus.avif",
   },
   {
     id: 3,
-    name: "Flower 4",
+    name: "Grand amour",
     price: 25.99,
     instock: phpVar4,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f4.png",
+    imgSrc: "../valentine/Grand amour.avif",
   },
   {
     id: 4,
-    name: "Flower 5",
+    name: "Jardin secret",
     price: 29.99,
     instock: phpVar5,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f5.png",
+    imgSrc: "../valentine/Jardin secret.avif",
   },
   {
     id: 5,
-    name: "Flower 6",
+    name: "Pomme d'amour",
     price: 39.99,
     instock: phpVar6,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f6.png",
+    imgSrc: "../valentine/Pomme d'amour.avif",
   },
 ];
+// collection felicitations
 const products2 = [
   {
     id: 0,
-    name: "Flower 1",
+    name: "Nos charmantes tulipes",
     price: 29.99,
     instock: phpVar1,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f1.png",
+    imgSrc: "../Félicitations/Nos ncharmantes tulipes.avif",
   },
   {
     id: 1,
-    name: "Flower hh",
+    name: "Brassée d'Hortensias",
     price: 24.99,
     instock: phpVar2,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f2.png",
+    imgSrc: "../Félicitations/Brassée d'Hortensias.avif",
   },
   {
     id: 2,
-    name: "Flower 3",
+    name: "Brassée de jonquilles",
     price: 19.99,
     instock: phpVar3,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f3.png",
+    imgSrc: "../Félicitations/Brassée de jonquilles.avif",
   },
   {
     id: 3,
-    name: "Flower 4",
+    name: "Eclat de rose",
     price: 25.99,
     instock: phpVar4,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f4.png",
+    imgSrc: "../Félicitations/Eclat de rose.avif",
   },
   {
     id: 4,
-    name: "Flower 5",
+    name: "Rosalie",
     price: 29.99,
     instock: phpVar5,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f5.png",
+    imgSrc: "../Félicitations/Rosalie.avif",
   },
-  {
-    id: 5,
-    name: "Flower 6",
-    price: 39.99,
-    instock: phpVar6,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f6.png",
-  },
+
 ];
+//collection anniversaire
 const products3 = [
   {
     id: 0,
-    name: "Flower kk",
-    price: 29.99,
+    name: "Azalée tige",
+    price: 80,
     instock: phpVar1,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f1.png",
+    imgSrc: "anniversaire/Azalée tige rose.avif",
   },
   {
     id: 1,
-    name: "Flower hh",
-    price: 24.99,
+    name: "Bonheur intense",
+    price: 95,
     instock: phpVar2,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f2.png",
+    imgSrc: "anniversaire/Bonheur intense.avif",
   },
   {
     id: 2,
-    name: "Flower 3",
-    price: 19.99,
+    name: "Brassée de lys",
+    price: 100,
     instock: phpVar3,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f3.png",
+    imgSrc: "anniversaire/Brassée de lys.avif",
   },
   {
     id: 3,
-    name: "Flower 4",
-    price: 25.99,
+    name: "Perlita",
+    price: 120,
     instock: phpVar4,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f4.png",
+    imgSrc: "anniversaire/Perlita.avif",
   },
   {
     id: 4,
-    name: "Flower 5",
-    price: 29.99,
+    name: "Joyeux anniversaire",
+    price: 100,
     instock: phpVar5,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f5.png",
+    imgSrc: "anniversaire/Joyeux anniversaire.avif",
   },
   {
     id: 5,
-    name: "Flower 6",
+    name: "Paradis blanc",
     price: 39.99,
     instock: phpVar6,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f6.png",
+    imgSrc: "anniversaire/Parads banc.avif",
   },
 ];
+//fleurs séchées
 const products4 = [
   {
     id: 0,
-    name: "Flower kk",
+    name: "Golden light",
     price: 29.99,
     instock: phpVar1,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f1.png",
+    imgSrc: "../dryflower/Golden light 30.avif",
   },
   {
     id: 1,
-    name: "Flower hh",
+    name: "Blue dream",
     price: 24.99,
     instock: phpVar2,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f2.png",
+    imgSrc: "../dryflower/Blue dream 35.avif",
   },
   {
     id: 2,
-    name: "Flower 3",
+    name: "Happy bohème",
     price: 19.99,
     instock: phpVar3,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f3.png",
+    imgSrc: "../dryflower/Happy bohème 50.avif",
   },
   {
     id: 3,
-    name: "Flower 4",
+    name: "Lovely carmen",
     price: 25.99,
     instock: phpVar4,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f4.png",
+    imgSrc: "../dryflower/Lovely carmen 40.avif",
   },
   {
     id: 4,
-    name: "Flower 5",
+    name: "Pampa mood",
     price: 29.99,
     instock: phpVar5,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f5.png",
+    imgSrc: "../dryflower/Pampa Mood 30.avif",
   },
   {
     id: 5,
-    name: "Flower 6",
+    name: "Pink fantasy",
     price: 39.99,
     instock: phpVar6,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/f6.png",
+    imgSrc: "../dryflower/Pink fantasy 45.avif",
   },
 ];
 
