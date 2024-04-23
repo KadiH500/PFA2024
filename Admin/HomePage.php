@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/HomePage.css" />
-    <title>Flower Site Admin Dashboard</title>
+    <title>Admin Dashboard</title>
 
     <style>
         /* Simple styles for the admin dashboard */
