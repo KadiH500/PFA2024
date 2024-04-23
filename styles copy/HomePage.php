@@ -46,7 +46,7 @@
       </div>
     </div>
     <div class="shopping-bag">
-    <a href="../login signup/losi.html"><img class="user-pic" src="../imgs/profil.png" alt=""></a>
+    <a href="..\profile\profile.html"><img class="user-pic" src="../imgs/profil.png" alt=""></a>
     
                 <a onclick="poof()">
                     <img src="../imgs/panier.png" alt="cart">
@@ -259,7 +259,7 @@
     <script src="./app.js"></script>
     <!-- 
       failed attempt
-      
+
       <div id="product-list"></div>
     -->
     </script>

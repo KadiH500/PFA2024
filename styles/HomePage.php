@@ -46,7 +46,7 @@
       </div>
     </div>
     <div class="shopping-bag">
-    <a href="../login signup/losi.html"><img class="user-pic" src="../imgs/profil.png" alt=""></a>
+    <a href="../login signup/losi.php"><img class="user-pic" src="../imgs/profil.png" alt=""></a>
     
                 <a onclick="poof()">
                     <img src="../imgs/panier.png" alt="cart">
@@ -69,7 +69,7 @@
                     Subtotal (0 items): $0
                 </div>
                 <div class="checkout">
-                  <a href="../login signup/losi.html">Proceed to checkout</a>
+                  <a href="../login signup/losi.php">Proceed to checkout</a>
                 </div>
         </div>
     </div>
