@@ -1,6 +1,6 @@
 <?php 
    session_start();
-   include "db_conn.php";
+   include "connexion.php";
    if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 
 <!--Website: wwww.codingdung.com-->
@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    
     <div class="container light-style flex-grow-1 container-p-y">
         <h4 class="font-weight-bold py-3 mb-4">
             Account settings
@@ -143,3 +144,6 @@
 </body>
 
 </html>
+<?php }else{
+	header("Location: ../login signup/losi.php");
+} ?>
