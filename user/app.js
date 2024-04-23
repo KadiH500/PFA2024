@@ -23,9 +23,6 @@ function renderProdcuts1() {
                             ${product.description}
                         </p>
                     </div>
-                    <div class="add-to-wishlist">
-                        <img src="./icons/heart.png" alt="add to wish list">
-                    </div>
                     <div class="add-to-cart" onclick="addToCart(${product.id})">
                         <img src="./icons/bag-plus.png" alt="add to cart">
                     </div>
@@ -49,9 +46,6 @@ function renderProdcuts2() {
                           <p>
                               ${product.description}
                           </p>
-                      </div>
-                      <div class="add-to-wishlist">
-                          <img src="./icons/heart.png" alt="add to wish list">
                       </div>
                       <div class="add-to-cart" onclick="addToCart(${product.id})">
                           <img src="./icons/bag-plus.png" alt="add to cart">
@@ -77,9 +71,6 @@ function renderProdcuts2() {
                               ${product.description}
                           </p>
                       </div>
-                      <div class="add-to-wishlist">
-                          <img src="./icons/heart.png" alt="add to wish list">
-                      </div>
                       <div class="add-to-cart" onclick="addToCart(${product.id})">
                           <img src="./icons/bag-plus.png" alt="add to cart">
                       </div>
@@ -104,9 +95,6 @@ function renderProdcuts2() {
                               ${product.description}
                           </p>
                       </div>
-                      <div class="add-to-wishlist">
-                          <img src="./icons/heart.png" alt="add to wish list">
-                      </div>
                       <div class="add-to-cart" onclick="addToCart(${product.id})">
                           <img src="./icons/bag-plus.png" alt="add to cart">
                       </div>
@@ -115,7 +103,11 @@ function renderProdcuts2() {
           `;
     }});
   }
-
+//adds open class to panier
+  function poof() 
+  {var targetDiv = document.getElementById('panier');
+  targetDiv.classList.toggle('open');
+  }
 // cart array
 let cart;
 if(localStorage.getItem("cart")==null){
@@ -141,6 +133,7 @@ function addToCart(id) {
   }
 
   updateCart();
+  updateOrder();
 }
 
 // update cart
@@ -193,6 +186,7 @@ function removeItemFromCart(id) {
   cart = cart.filter((item) => item.id !== id);
 
   updateCart();
+  updateOrder();
 }
 
 // change number of units for an item
@@ -215,9 +209,26 @@ function changeNumberOfUnits(action, id) {
   });
 
   updateCart();
+  updateOrder();
 }
 
-  renderProdcuts4();
-  renderProdcuts1();
-  renderProdcuts2();
-  renderProdcuts3();
+  function fetchData() {
+    fetch('./includes/fetch.php')
+        .then(response => response.json()) // Parse the response as JSON
+        .then(data => {
+            // Example: Display product information
+            const productList = document.getElementById('product-list');
+            data.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.textContent = `${product.name} - ${product.price}`;
+                productList.appendChild(productElement);
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+}
+
+fetchData();
+renderProdcuts4();
+renderProdcuts1();
+renderProdcuts2();
+renderProdcuts3();

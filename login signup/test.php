@@ -4,6 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require('connexion.php'); // Include or require your database connection file
 
     if (isset($_POST['btnsignin'])) {
+        echo '33';
         if (isset($_POST['user']) && isset($_POST['pw'])) {
             $username = $_POST['user'];
             $password = $_POST['pw'];
@@ -24,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
                 // Redirect based on role
                 if ($role === 'acheteur') {
-                    header("Location: ../stylesuser/HomePage.php");
+                    header("Location: ../user/HomePage.php");
                     exit(); // Exit after redirection
                 } elseif ($role === 'fleuriste') {
                     header("Location: ../stylesadmin/HomePage.php");
@@ -35,10 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Invalid username or password.";
             }
     
-            $stmt->closeCursor(); // Close the cursor
         }
     }
-    } elseif (isset($_POST["btnsignup"])) {
+    else if(isset($_POST["btnsignup"])) {
+        echo "1";
         // Handle sign-up form submission
         $username = $_POST['username'];
         $email = $_POST['email'];
@@ -46,24 +47,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $role = $_POST['role'];
 
         // Check if the user already exists
-        $check_query = "SELECT * FROM signup WHERE username='$username' OR email='$email'";
-        $result = $conn->query($check_query);
-        $row_count = $result->rowCount();
+        $check_query = "SELECT * FROM signup WHERE username=:username OR email=:email";
+        $check_stmt = $conn->prepare($check_query);
+        $check_stmt->bindParam(':username', $username);
+        $check_stmt->bindParam(':email', $email);
+        $check_stmt->execute();
+        $row_count = $check_stmt->rowCount();
 
         if ($row_count === 0) {
             // No user with the same username or email exists, proceed with insertion
             $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hash the password
-            $insert_query = "INSERT INTO signup (username, email, password, role) VALUES ('$username', '$email', '$hashed_password', '$role')";
-            $insert_result = $conn->query($insert_query);
+            $insert_query = "INSERT INTO signup (username, email, password, role) VALUES (:username, :email, :password, :role)";
+            $insert_stmt = $conn->prepare($insert_query);
+            $insert_stmt->bindParam(':username', $username);
+            $insert_stmt->bindParam(':email', $email);
+            $insert_stmt->bindParam(':password', $hashed_password);
+            $insert_stmt->bindParam(':role', $role);
+            $insert_result = $insert_stmt->execute();
+
             if ($insert_result) {
                 // Start a session and set session variables
                 session_start();
+                $lastInsertId = $conn->lastInsertId();
+
                 $_SESSION['username'] = $username;
-                $_SESSION['id'] = $conn->lastInsertId(); // Assuming you have an auto-increment ID
+                $_SESSION['id'] = $lastInsertId; // Assuming you have an auto-increment ID
                 
                 // Redirect based on role
                 if ($role === 'acheteur') {
-                    header("Location: ../stylesuser/HomePage.php");
+                    header("Location: ../user/HomePage.php");
                     exit(); // Exit after redirection
                 } elseif ($role === 'fleuriste') {
                     header("Location: ../stylesadmin/HomePage.php");
@@ -78,5 +90,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "User already exists. Please try again.";
         }
     }
-
+    $conn = null;
+}
 ?>

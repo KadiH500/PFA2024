@@ -1,6 +1,6 @@
 <?php 
    session_start();
-   include "../login signup/connexion.php";
+   include "connexion.php";
    if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 
 
@@ -24,7 +24,7 @@
 </head>
 <body>
   <?php include './includes/getstock.inc.php';
-    session_start(); ?>
+    ?>
   <nav class="navbar">
     <div class="container">
       <div>
@@ -52,7 +52,7 @@
       </div>
     </div>
     <div class="shopping-bag">
-    <a href="../profile/profile.php"><img class="user-pic" src="../imgs/profil.png" alt=""></a>
+    <a href="../login signup/losi.html"><img class="user-pic" src="../imgs/profil.png" alt=""></a>
     
                 <a onclick="poof()">
                     <img src="../imgs/panier.png" alt="cart">
@@ -75,11 +75,12 @@
                     Subtotal (0 items): $0
                 </div>
                 <div class="checkout">
-                  <a href="../login signup/losi.html">Proceed to checkout</a>
+                  <a id="openPopup" >Proceed to checkout</a>
                 </div>
         </div>
     </div>
 <div class="main">
+
   <section>
     <div class="container-introduction">
       <img class="picture-intro" src="../imgs/footerpic.PNG" alt="">
@@ -108,6 +109,7 @@
       <figure>
         <img class="picture" class="user-p" src="../imgs/2nd.avif" alt="">
 
+        
         <h1 class="title">Création par un artisan fleuriste.</h1>
         <figcaption class="figcaption"> Un service de qualité,
           <br>un réseau d'artisans fleuristes d'exception garantissant une livraison de proximité.
@@ -265,8 +267,21 @@
     <script src="./app.js"></script>
     <div id="product-list"></div>
     </script>
+
+    <!-- PopUp-->
+    <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Order Information</h2>
+      <p id="orderid">Order ID: 13</p>
+      <p id="items">Item: Awesome Product</p>
+      <button id="confirmOrder">Confirm</button>
+      <button id="cancelOrder">Cancel</button>
+    </div>
+  </div>
+
 </body>
 </html>
+
 <?php }else{
-	header("Location: ../styles/HomePage.php");
+	header("Location: ../login signup/losi.php");
 } ?>

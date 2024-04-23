@@ -1,5 +1,3 @@
-<?php 
-   session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +18,7 @@
                     <div class="form sign-up">
                         <div class="input-group">
                             <i class='bx bxs-user'></i>
-                            <input type="hidden" name="action" id="action" value="signup">
-
+                            
                             <input type="text" placeholder="Nom d'utilisateur" name="username" id="username">
                             <span id="usernameError" class="error"></span>
                         </div>
@@ -66,15 +63,14 @@
         <div class="form sign-in">
             <div class="input-group">
                 <i class='bx bxs-user'></i>
-                <input type="hidden" name="action" id="action" value="signin">
-
+                
                 <input type="text" placeholder="Nom d'utilisateur" name="user" id="user">
             </div>
             <div class="input-group">
                 <i class='bx bxs-lock-alt'></i>
                 <input type="password" placeholder="Mot de passe" name="pw" id="pw">
             </div>
-            <button type="submit" onclick="validatesignin()" name="btnsignin">Valider</button>
+            <button type="submit" onclick="return validatesignin()" name="btnsignin">Valider</button>
 
 
             <p>
