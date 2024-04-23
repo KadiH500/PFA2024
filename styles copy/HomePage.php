@@ -69,7 +69,7 @@
                     Subtotal (0 items): $0
                 </div>
                 <div class="checkout">
-                  <a onclick="alert('test');" href="../login signup/losi.html">Proceed to checkout</a>
+                  <a id="openPopup" >Proceed to checkout</a>
                 </div>
         </div>
     </div>
@@ -259,5 +259,17 @@
     <script src="./app.js"></script>
     <div id="product-list"></div>
     </script>
+
+    <!-- PopUp-->
+    <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Order Information</h2>
+      <p id="orderid">Order ID: 13</p>
+      <p id="items">Item: Awesome Product</p>
+      <button id="confirmOrder">Confirm</button>
+      <button id="cancelOrder">Cancel</button>
+    </div>
+  </div>
+
 </body>
 </html>

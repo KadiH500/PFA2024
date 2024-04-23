@@ -18,7 +18,10 @@ function renderProdcuts1() {
                     </div>
                     <div class="desc">
                         <h2>${product.name}</h2>
-                        <h2><small>Dt</small>${product.price}</h2>
+                        <h2><small>$</small>${product.price}</h2>
+                        <p>
+                            ${product.description}
+                        </p>
                     </div>
                     <div class="add-to-cart" onclick="addToCart(${product.id})">
                         <img src="./icons/bag-plus.png" alt="add to cart">
@@ -38,9 +41,12 @@ function renderProdcuts2() {
                           <img src="${product.imgSrc}" alt="${product.name}">
                       </div>
                       <div class="desc">
-                        <h2>${product.name}</h2>
-                        <h2><small>Dt</small>${product.price}</h2>
-                    </div>
+                          <h2>${product.name}</h2>
+                          <h2><small>$</small>${product.price}</h2>
+                          <p>
+                              ${product.description}
+                          </p>
+                      </div>
                       <div class="add-to-cart" onclick="addToCart(${product.id})">
                           <img src="./icons/bag-plus.png" alt="add to cart">
                       </div>
@@ -59,9 +65,12 @@ function renderProdcuts2() {
                           <img src="${product.imgSrc}" alt="${product.name}">
                       </div>
                       <div class="desc">
-                        <h2>${product.name}</h2>
-                        <h2><small>Dt</small>${product.price}</h2>
-                    </div>
+                          <h2>${product.name}</h2>
+                          <h2><small>$</small>${product.price}</h2>
+                          <p>
+                              ${product.description}
+                          </p>
+                      </div>
                       <div class="add-to-cart" onclick="addToCart(${product.id})">
                           <img src="./icons/bag-plus.png" alt="add to cart">
                       </div>
@@ -80,9 +89,12 @@ function renderProdcuts2() {
                           <img src="${product.imgSrc}" alt="${product.name}">
                       </div>
                       <div class="desc">
-                        <h2>${product.name}</h2>
-                        <h2><small>Dt</small>${product.price}</h2>
-                    </div>
+                          <h2>${product.name}</h2>
+                          <h2><small>$</small>${product.price}</h2>
+                          <p>
+                              ${product.description}
+                          </p>
+                      </div>
                       <div class="add-to-cart" onclick="addToCart(${product.id})">
                           <img src="./icons/bag-plus.png" alt="add to cart">
                       </div>
@@ -121,6 +133,7 @@ function addToCart(id) {
   }
 
   updateCart();
+  updateOrder();
 }
 
 // update cart
@@ -173,6 +186,7 @@ function removeItemFromCart(id) {
   cart = cart.filter((item) => item.id !== id);
 
   updateCart();
+  updateOrder();
 }
 
 // change number of units for an item
@@ -195,6 +209,7 @@ function changeNumberOfUnits(action, id) {
   });
 
   updateCart();
+  updateOrder();
 }
 
   function fetchData() {
