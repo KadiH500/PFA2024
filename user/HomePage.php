@@ -1,6 +1,7 @@
 <?php 
    session_start();
    include "connexion.php";
+   echo ($_SESSION['id']);
    if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 
 
@@ -286,6 +287,9 @@
     <input type="hidden" id="hiddenField3" name="date">
     <input type="hidden" id="hiddenField4" name="flowers">
 </form>
+<script>
+  var userId = <?php echo json_encode($_SESSION['id']); ?>;
+</script>
 </body>
 </html>
 <?php }else{

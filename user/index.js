@@ -68,7 +68,7 @@ function setHiddenFormValues() {
   concatenatedNames += cart[i].numberOfUnits+'x'+cart[i].name;
 }
     document.getElementById("hiddenField1").value = orderid; // Set hidden field value
-    document.getElementById("hiddenField2").value = 13; 
+    document.getElementById("hiddenField2").value = userId; 
     document.getElementById("hiddenField3").value = new Date().toISOString();
     document.getElementById("hiddenField4").value = concatenatedNames; 
     cartItemsEl.innerHTML = "";
