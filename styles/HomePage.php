@@ -30,9 +30,7 @@
           <li onclick="smoothScroll('#anniversaire')"> <a href="##">Anniversaire</a></li>
           <li onclick="smoothScroll('#valentine')"> <a href="##">Saint valentin</a></li>
           <li onclick="smoothScroll('#mariage')"> <a href="##">Mariage</a></li>
-          <li onclick="smoothScroll('#felicitations')"> <a href="##">Félicitations</a></li>
           <li onclick="smoothScroll('#dryflowers')"> <a href="##">Fleurs séchées</a></li>
-          <li onclick="smoothScroll('#plantes')"> <a href="##">Plantes</a></li>
           <li onclick="smoothScroll('#decoration')"> <a href="##">Décoration</a></li>
 
         </ul>
@@ -50,14 +48,14 @@
     <div class="shopping-bag">
     <a href="../login signup/losi.html"><img class="user-pic" src="../imgs/profil.png" alt=""></a>
     
-                <a href="#">
+                <a onclick="poof()">
                     <img src="../imgs/panier.png" alt="cart">
                     Cart
                     <div class="total-items-in-cart"></div>
                 </a>
       </div>
   </nav>
-  <div class="panier">
+  <div id="panier" class="panier">
     <div class="cart-header">
                 <div class="column1">Item</div>
                 <div class="column2">Unit price</div>
@@ -129,9 +127,9 @@
             <!-- render prods -->
         </div>
     </div>
-    <div id="felicitations">
+    <div id="mariage">
       <p class="wedding-collection">
-        Des félicitations en fleurs, rien de plus radieux
+      Des fleurs pour célébrer un mariage, rien de plus radieux.
       </p>
       <div class="products-list">
         <div class="products2 products">
@@ -191,13 +189,12 @@
   <p class="wedding-collection">Empruntez des idées captivantes pour votre décoration</p>
  </div>
  <div class="container-card">
-  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.29 PM.mp4" controls></video>
-  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.30 PM (1).mp4" controls></video>
-  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.30 PM.mp4" controls></video>
-  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.31 PM (1).mp4" controls></video>
-  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.31 PM.mp4" controls></video>
-  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.32 PM (1).mp4" controls></video>
-  <video src="./vid/WhatsApp Video 2024-04-12 at 12.18.32 PM.mp4"controls></video>
+  <video src="../vid/WhatsApp Video 2024-04-12 at 12.18.29 PM.mp4" controls></video>
+  <video src="../vid/WhatsApp Video 2024-04-12 at 12.18.30 PM (1).mp4" controls></video>
+  <video src="../vid/WhatsApp Video 2024-04-12 at 12.18.30 PM.mp4" controls></video>
+  <video src="../vid/WhatsApp Video 2024-04-12 at 12.18.31 PM (1).mp4" controls></video>
+  <video src="../vid/WhatsApp Video 2024-04-12 at 12.18.31 PM.mp4" controls></video>
+  <video src="../vid/WhatsApp Video 2024-04-12 at 12.18.32 PM (1).mp4" controls></video>
 </div>
  <footer>
   <div class="footer-content">
@@ -260,5 +257,7 @@
     </script>
     <script src="./products.js"></script>
     <script src="./app.js"></script>
+    <div id="product-list"></div>
+    </script>
 </body>
 </html>
