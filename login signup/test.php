@@ -1,91 +1,82 @@
 <?php
-
-// Check if the form was submitted
+// Check if the request method is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    require('connexion.php');
+    require('connexion.php'); // Include or require your database connection file
 
-        // Determine which form was submitted based on the form_type value
-        if (isset($_POST['signup'])) {
-
-
-            // Process sign-up form
-            $username = $_POST['username'];
-            $email = $_POST['email'];
-            $password = $_POST['password1'];
-            $password=$_POST['password2'];
-            $role=$_POST['role'];
-
-           
-                $check_query = "SELECT * FROM signup WHERE username='$username' OR email='$email'";
-            $result = $conn->query($check_query);
-            if ($result->rowCount() > 0) {
-                $errorMessage3 = "already exists try again.";
-                echo "<script>alert('$errorMessage3');</script>";
-            } else {
-
-                // Insert data into the database
-                echo"2";
-                $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hash the password
-                $insert_query = "INSERT INTO signup (username , email , password , role)VALUES ('$username', '$email', '$hashed_password' , '$role')";
-                $tr=$conn->query($insert_query);
-                if ($tr) {
-                    if ($role === 'user') {
-                        header("Location: ../stylesuser/HomePage.php");
-                    } elseif ($role === 'admin') {
-                            header("Location: ../stylesadmin/HomePage.php");
-                        }
-        
-                } else {
-                    echo "Error:";
-                }
-            }
-        
-        
-        }
-        else if (isset($_POST['signin'])) {
+    if (isset($_POST['btnsignin'])) {
+        if (isset($_POST['user']) && isset($_POST['pw'])) {
             $username = $_POST['user'];
             $password = $_POST['pw'];
-            if (empty($username)) {
-                header("Location: losi.html?error=User Name is Required");
-            }else if (empty($password)) {
-                header("Location: losi.html?error=Password is Required");
-            }else {
-        
-                // Hashing the password
-                $password = md5($password);
+    
+            // Fetch hashed password from the database
+            $stmt = $conn->prepare("SELECT password, role FROM signup WHERE username = ?");
+            $stmt->bindParam(1, $username);
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            $hashedPasswordFromDB = $result['password'];
+            $role = $result['role']; // Fetch role from the database
+    
+            if ($hashedPasswordFromDB && password_verify($password, $hashedPasswordFromDB)) {
+                // Passwords match, start a session and set session variables
+                session_start();
+                $_SESSION['username'] = $username;
+                $_SESSION['id'] = $conn->lastInsertId(); // Assuming you have an auto-increment ID
                 
-                $sql = "SELECT * FROM signup WHERE username='$username' AND password='$password'";
-                $result = $conn->query($sql);
-
-                if ($result->rowCount() === 1) {
-                    $row = $result->fetch(PDO::FETCH_ASSOC);
-                    $role = $row['role']; // Assuming 'role' is the column in your database that stores user roles
-
-                    // Redirect users based on their role
-                    if ($role === 'user') {
+                // Redirect based on role
+                if ($role === 'acheteur') {
                     header("Location: ../stylesuser/HomePage.php");
-                    } elseif ($role === 'admin') {
-                        header("Location: ../stylesadmin/HomePage.php");
-                    }
-    
-                } else {
-                    header("Location: losi.html?error=Incorect User name or password");
+                    exit(); // Exit after redirection
+                } elseif ($role === 'fleuriste') {
+                    header("Location: ../stylesadmin/HomePage.php");
+                    exit(); // Exit after redirection
                 }
-
-        
+            } else {
+                // Invalid credentials
+                echo "Invalid username or password.";
             }
-            
-        }else {
-            header("Location: losi.html");
-        }
-
-
-
-        
     
+            $stmt->closeCursor(); // Close the cursor
+        }
+    }
+    } elseif (isset($_POST["btnsignup"])) {
+        // Handle sign-up form submission
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password1']; // Assuming your password field is named 'password1'
+        $role = $_POST['role'];
+
+        // Check if the user already exists
+        $check_query = "SELECT * FROM signup WHERE username='$username' OR email='$email'";
+        $result = $conn->query($check_query);
+        $row_count = $result->rowCount();
+
+        if ($row_count === 0) {
+            // No user with the same username or email exists, proceed with insertion
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hash the password
+            $insert_query = "INSERT INTO signup (username, email, password, role) VALUES ('$username', '$email', '$hashed_password', '$role')";
+            $insert_result = $conn->query($insert_query);
+            if ($insert_result) {
+                // Start a session and set session variables
+                session_start();
+                $_SESSION['username'] = $username;
+                $_SESSION['id'] = $conn->lastInsertId(); // Assuming you have an auto-increment ID
+                
+                // Redirect based on role
+                if ($role === 'acheteur') {
+                    header("Location: ../stylesuser/HomePage.php");
+                    exit(); // Exit after redirection
+                } elseif ($role === 'fleuriste') {
+                    header("Location: ../stylesadmin/HomePage.php");
+                    exit(); // Exit after redirection
+                }
+            } else {
+                // Error occurred during insertion
+                echo "Error occurred during registration.";
+            }
+        } else {
+            // User with the same username or email already exists
+            echo "User already exists. Please try again.";
+        }
     }
 
-
-// Close the database connection
-$conn=null;
 ?>
