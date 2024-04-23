@@ -18,7 +18,7 @@ function renderProdcuts1() {
                     </div>
                     <div class="desc">
                         <h2>${product.name}</h2>
-                        <h2>${product.price}<small> Dt</small></h2>
+                        <h2><small>Dt</small>${product.price}</h2>
                     </div>
                     <div class="add-to-cart" onclick="addToCart(${product.id})">
                         <img src="./icons/bag-plus.png" alt="add to cart">
@@ -39,7 +39,7 @@ function renderProdcuts2() {
                       </div>
                       <div class="desc">
                         <h2>${product.name}</h2>
-                        <h2>${product.price}<small> Dt</small></h2>
+                        <h2><small>Dt</small>${product.price}</h2>
                     </div>
                       <div class="add-to-cart" onclick="addToCart(${product.id})">
                           <img src="./icons/bag-plus.png" alt="add to cart">
@@ -60,7 +60,7 @@ function renderProdcuts2() {
                       </div>
                       <div class="desc">
                         <h2>${product.name}</h2>
-                        <h2>${product.price}<small> Dt</small></h2>
+                        <h2><small>Dt</small>${product.price}</h2>
                     </div>
                       <div class="add-to-cart" onclick="addToCart(${product.id})">
                           <img src="./icons/bag-plus.png" alt="add to cart">
@@ -81,7 +81,7 @@ function renderProdcuts2() {
                       </div>
                       <div class="desc">
                         <h2>${product.name}</h2>
-                        <h2>${product.price}<small> Dt</small></h2>
+                        <h2><small>Dt</small>${product.price}</h2>
                     </div>
                       <div class="add-to-cart" onclick="addToCart(${product.id})">
                           <img src="./icons/bag-plus.png" alt="add to cart">
