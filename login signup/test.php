@@ -20,8 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($hashedPasswordFromDB && password_verify($password, $hashedPasswordFromDB)) {
                 // Passwords match, start a session and set session variables
                 session_start();
+                $lastInsertId = $conn->lastInsertId();
+
                 $_SESSION['username'] = $username;
-                $_SESSION['id'] = $conn->lastInsertId(); // Assuming you have an auto-increment ID
+                $_SESSION['id'] = $lastInsertId; // Assuming you have an auto-increment ID
                 
                 // Redirect based on role
                 if ($role === 'acheteur') {
