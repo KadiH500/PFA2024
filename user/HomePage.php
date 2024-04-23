@@ -1,7 +1,6 @@
 <?php 
    session_start();
    include "connexion.php";
-   echo ($_SESSION['id']);
    if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 
 
