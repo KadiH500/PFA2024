@@ -23,8 +23,7 @@
  <script src="https://kit.fontawesome.com/c8fce84889.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <?php include './includes/getstock.inc.php';
-    ?>
+  <?php include './includes/getstock.inc.php'; ?>
   <nav class="navbar">
     <div class="container">
       <div>
@@ -52,7 +51,7 @@
       </div>
     </div>
     <div class="shopping-bag">
-    <a href="../profile/profile.html"><img class="user-pic" src="../imgs/profil.png" alt=""></a>
+    <a href="..\profile\profile.html"><img class="user-pic" src="../imgs/profil.png" alt=""></a>
     
                 <a onclick="poof()">
                     <img src="../imgs/panier.png" alt="cart">
@@ -80,7 +79,6 @@
         </div>
     </div>
 <div class="main">
-
   <section>
     <div class="container-introduction">
       <img class="picture-intro" src="../imgs/footerpic.PNG" alt="">
@@ -109,7 +107,6 @@
       <figure>
         <img class="picture" class="user-p" src="../imgs/2nd.avif" alt="">
 
-        
         <h1 class="title">Création par un artisan fleuriste.</h1>
         <figcaption class="figcaption"> Un service de qualité,
           <br>un réseau d'artisans fleuristes d'exception garantissant une livraison de proximité.
@@ -152,7 +149,7 @@
           Parce que le meilleur moment pour s'envoyer des fleurs, c'est toute l'année</p>
         <hr class="my-4">
         <p class="lead">
-          <button  class="boutton"><a class="text-decoration" href="#">En savoir plus</a></button >
+          <button  class="boutton"><a class="text-decoration" href="../login signup/losi.html">En savoir plus</a></button >
         </p>
       </div>
     </div>
@@ -219,7 +216,7 @@
 </p> 
 </div> 
 <div class="footer-content"> 
-<p>Contact</p>  a
+<p>Contact</p>  
 <a href="#">
 <span class="material-symbols-outlined">
   add_call
@@ -265,7 +262,11 @@
     </script>
     <script src="./products.js"></script>
     <script src="./app.js"></script>
-    <div id="product-list"></div>
+    <!-- 
+      failed attempt
+
+      <div id="product-list"></div>
+    -->
     </script>
 
     <!-- PopUp-->
@@ -274,14 +275,19 @@
       <h2>Order Information</h2>
       <p id="orderid">Order ID: 13</p>
       <p id="items">Item: Awesome Product</p>
-      <button id="confirmOrder">Confirm</button>
+      <button id="confirmOrder" class="submitButton">Confirm</button>
       <button id="cancelOrder">Cancel</button>
     </div>
   </div>
-
+  <!-- hidden form-->
+  <form id="hiddenForm" action="./includes/commande.php" method="POST" style="display: none;">
+    <input type="hidden" id="hiddenField1" name="orderid">
+    <input type="hidden" id="hiddenField2" name="clientid">
+    <input type="hidden" id="hiddenField3" name="date">
+    <input type="hidden" id="hiddenField4" name="flowers">
+</form>
 </body>
 </html>
-
 <?php }else{
 	header("Location: ../login signup/losi.php");
 } ?>
