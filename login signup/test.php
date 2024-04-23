@@ -4,7 +4,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require('connexion.php'); // Include or require your database connection file
 
     if (isset($_POST['btnsignin'])) {
-        echo '33';
         if (isset($_POST['user']) && isset($_POST['pw'])) {
             $username = $_POST['user'];
             $password = $_POST['pw'];
@@ -39,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     else if(isset($_POST["btnsignup"])) {
-        echo "1";
         // Handle sign-up form submission
         $username = $_POST['username'];
         $email = $_POST['email'];
