@@ -219,7 +219,7 @@
 </p> 
 </div> 
 <div class="footer-content"> 
-<p>Contact</p>  
+<p>Contact</p>  a
 <a href="#">
 <span class="material-symbols-outlined">
   add_call
