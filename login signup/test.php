@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     header("Location: ../user/HomePage.php");
                     exit(); // Exit after redirection
                 } elseif ($role === 'fleuriste') {
-                    header("Location: ../stylesadmin/HomePage.php");
+                    header("Location: ../Admin/adminPage.php");
                     exit(); // Exit after redirection
                 }
             } else {
@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     header("Location: ../user/HomePage.php");
                     exit(); // Exit after redirection
                 } elseif ($role === 'fleuriste') {
-                    header("Location: ../stylesadmin/HomePage.php");
+                    header("Location: ../Admin/adminPage.php");
                     exit(); // Exit after redirection
                 }
             } else {
