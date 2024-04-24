@@ -135,7 +135,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
                                     <input type="password" class="form-control" name="password2">
                                 </div>
                                 <div class="text-right mt-3">
-                                    <input type="submit" value="submit" class="btn btn-primary">&nbsp;
+                                    <input type="submit" value="submit" class="btn btn-primary" name="pwbtn">&nbsp;
                                     <input type="reset" value="Cancel" class="btn btn-default">
                                 </div>
                             </div>
