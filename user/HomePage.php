@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="shopping-bag">
-    <a href="..\profile\profile.html"><img class="user-pic" src="../imgs/profil.png" alt=""></a>
+    <a href="..\profile\profil1.php"><img class="user-pic" src="../imgs/profil.png" alt=""></a>
     
                 <a onclick="poof()">
                     <img src="../imgs/panier.png" alt="cart">
