@@ -35,7 +35,7 @@
 
         </ul>
         <div class="box">
-          <input type="text" placeholder="Recherche...">
+          <input type="search" placeholder="Recherche...">
           <a href="#">
  <i class="fas fa-search"></i>
           </a>
