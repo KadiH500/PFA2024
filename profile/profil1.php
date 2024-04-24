@@ -23,10 +23,17 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
         $adresse = $userData['adresse'];
         $codepostal = $userData['codepostal'];
         $phone = $userData['phone'];
-    } else {
-        // Handle case where user data is not found
-        // Redirect or display an error message
     }
+    $stmt3 = $conn->prepare("SELECT * FROM commande WHERE customer_id = ?");
+    $stmt3->bindParam(1, $userId);
+    $stmt3->execute();
+    $userData3 = $stmt3->fetch(PDO::FETCH_ASSOC);
+
+    if ($userData3){
+        $da= $userData3['date'];
+        $produc=$userData3['flowers'];
+    } 
+
 } else {
     header("Location: ../login signup/losi.php");
     exit();
@@ -78,7 +85,8 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="account-user">
                             <div class="card-body media align-items-center">
-                                <p class="p-border"><strong>Username: </strong><?php echo $username; ?></p>
+                                <p class="p-border">
+                                <strong>Username: </strong><?php echo $username; ?></p>
                                 <p><strong>Name: </strong><?php echo $name; ?></p>
                                 <p><strong>Email: </strong><?php echo $email; ?></p>
                                 <p><strong>Ville: </strong><?php echo $ville; ?></p>
@@ -135,7 +143,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
                                         <input type="submit" value="Submit" class="btn btn-primary" name="submitbtn">&nbsp;
                                         <input type="reset" value="Cancel" class="btn btn-default">
                                     </div>
-                                </form>
+                                
                             </div>
                         </div>
                         <div class="tab-pane fade" id="account-change-password">
@@ -158,9 +166,11 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
                                     <input type="reset" value="Cancel" class="btn btn-default">
                                 </div>
                             </div>
+</form>
                         </div>
                         <div class="tab-pane fade" id="account-commandes">
-                            <!-- Your Commandes form or content goes here -->
+                                <p><strong>Date: </strong><?php echo $da; ?></p>
+                                <p><strong>Produit: </strong><?php echo $produc; ?></p>
                         </div>
                     </div>
                 </div>
