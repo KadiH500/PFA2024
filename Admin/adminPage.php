@@ -12,7 +12,7 @@ require '../main/includes/dbh.inc.php';
 <nav class="navbar">
     <div class="container">
       <div>
-        <a href="../main/HomePage.php">
+        <a href="admin/HomePage.php">
         <img class="logo" src="../imgs/navbarlogo.jpeg" alt=""></a>
       </div>
       </div>
