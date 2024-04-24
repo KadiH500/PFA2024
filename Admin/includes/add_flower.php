@@ -1,5 +1,5 @@
 <?php
-require_once "../../styles/includes/dbh.inc.php";
+require_once "../../main/includes/dbh.inc.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Add a new flower (using a simple form with a prompt)
     $flower_name = "test";
@@ -14,5 +14,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Redirect back to the dashboard
-header("Location: ../HomePage.php");
+header("Location: ../adminPage.php");
 ?>

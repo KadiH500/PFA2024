@@ -1,5 +1,5 @@
 <?php
-require_once "../../styles/includes/dbh.inc.php";
+require_once "../../main/includes/dbh.inc.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->query("SELECT MAX(id) AS last_id FROM stock");
     $last_id = $stmt->fetch()['last_id'];
@@ -14,6 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Redirect back to the dashboard
-header("Location: ../HomePage.php");
+header("Location: ../adminPage.php");
 ?>
 ?>
