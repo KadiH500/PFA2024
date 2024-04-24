@@ -39,11 +39,30 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./profile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container light-style flex-grow-1 container-p-y">
+<nav class="navbar">
+    <div class="container">
+      <div>
+        <img class="logo" src="../imgs/navbarlogo.jpeg" alt="">
+      </div>
+      <div class="container-nav">
+        <ul class="menu">
+          <li onclick="smoothScroll('#home')"> <a href="##">Acceuil</a></li>
+          <li onclick="smoothScroll('#anniversaire')"> <a href="##">Anniversaire</a></li>
+          <li onclick="smoothScroll('#valentine')"> <a href="##">Saint valentin</a></li>
+          <li onclick="smoothScroll('#mariage')"> <a href="##">Mariage</a></li>
+          <li onclick="smoothScroll('#dryflowers')"> <a href="##">Fleurs séchées</a></li>
+          <li onclick="smoothScroll('#decoration')"> <a href="##">Décoration</a></li>
+
+        </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <div class="main">
         <h4 class="font-weight-bold py-3 mb-4">Account settings</h4>
         <div class="card overflow-hidden">
             <div class="row no-gutters row-bordered row-border-light">
