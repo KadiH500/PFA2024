@@ -68,6 +68,7 @@ require '../main/includes/dbh.inc.php';
         }
         ?>
     </div>
+    <button ><a href="logout.php">Log out</a></button>
     </div>
 </body>
 </html>
