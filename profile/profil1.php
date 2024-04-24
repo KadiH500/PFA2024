@@ -16,6 +16,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
 
 
     if ($userData && $userData2) {
+
         $username = $userData2['username'];
         $name = $userData['name'];
         $email = $userData2['email'];
@@ -30,7 +31,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
     $userData3 = $stmt3->fetch(PDO::FETCH_ASSOC);
 
     if ($userData3){
-        $da= $userData3['date'];
+        $da= $userData3['datetime'];
         $produc=$userData3['flowers'];
     } 
 
@@ -57,15 +58,17 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
       </div>
       <div class="container-nav">
         <ul class="menu">
-          <li onclick="smoothScroll('#home')"> <a href="##">Acceuil</a></li>
+          <li onclick="smoothScroll('#home')"> <a href="../user/HomePage.php">Acceuil</a></li>
           <li onclick="smoothScroll('#anniversaire')"> <a href="##">Anniversaire</a></li>
           <li onclick="smoothScroll('#valentine')"> <a href="##">Saint valentin</a></li>
           <li onclick="smoothScroll('#mariage')"> <a href="##">Mariage</a></li>
           <li onclick="smoothScroll('#dryflowers')"> <a href="##">Fleurs séchées</a></li>
           <li onclick="smoothScroll('#decoration')"> <a href="##">Décoration</a></li>
-
+          <li>
+            <a href="logout.php" class="btn btn-primary">Log Out</a></li>
         </ul>
         </div>
+        
       </div>
     </div>
   </nav>
@@ -85,14 +88,30 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="account-user">
                             <div class="card-body media align-items-center">
-                                <p class="p-border">
-                                <strong>Username: </strong><?php echo $username; ?></p>
-                                <p><strong>Name: </strong><?php echo $name; ?></p>
-                                <p><strong>Email: </strong><?php echo $email; ?></p>
-                                <p><strong>Ville: </strong><?php echo $ville; ?></p>
-                                <p><strong>Adresse: </strong><?php echo $adresse; ?></p>
-                                <p><strong>Code Postal: </strong><?php echo $codepostal; ?></p>
-                                <p><strong>Phone: </strong><?php echo $phone; ?></p>
+                            <div class="user-info">
+
+                            <p>
+                                    <strong>Username: </strong><?php echo $username; ?>
+                                </p>
+                                <p>
+                                    <strong>Name: </strong><?php echo $name; ?>
+                                </p>
+                                <p>
+                                    <strong>Email: </strong><?php echo $email; ?>
+                                </p>
+                                <p>
+                                    <strong>Ville: </strong><?php echo $ville; ?>
+                                </p>
+                                <p>
+                                    <strong>Adresse: </strong><?php echo $adresse; ?>
+                                </p>
+                                <p>
+                                    <strong>Code Postal: </strong><?php echo $codepostal; ?>
+                                </p>
+                                <p>
+                                <strong>Phone: </strong><?php echo $phone; ?>
+                            </p>
+                            </div>
                             </div>
                             
                         </div>
@@ -109,7 +128,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">E-mail</label>
-                                        <input type="text" class="form-control mb-1" value="nmaxwell@mail.com" name="email">
+                                        <input type="text" class="form-control mb-1" value="" name="email">
                                         <div class="alert alert-warning mt-3">
                                             Your email is not confirmed. Please check your inbox.<br>
                                             <a href="javascript:void(0)">Resend confirmation</a>

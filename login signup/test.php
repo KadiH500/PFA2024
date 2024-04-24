@@ -66,6 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $insert_stmt->bindParam(':password', $hashed_password);
             $insert_stmt->bindParam(':role', $role);
             $insert_result = $insert_stmt->execute();
+            $insert_query2 = "INSERT INTO `users`(`id`, `name`, `ville`, `adresse`, `codepostal`, `phone`) VALUES (:,[value-2],[value-3],[value-4],[value-5],[value-6])";
 
             if ($insert_result) {
                 // Start a session and set session variables
@@ -75,6 +76,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['username'] = $username;
                 $_SESSION['id'] = $lastInsertId; // Assuming you have an auto-increment ID
                 
+                //using this in the profile has nothing to do with the losi
+                $userId=$_SESSION['id'];
+                $insertStmt2 = $conn->prepare("INSERT INTO `users`(`id`) VALUES (:id)");
+                $insertStmt2->bindParam(':id', $userId);
+                $insertStmt2->execute();
                 // Redirect based on role
                 if ($role === 'acheteur') {
                     header("Location: ../user/HomePage.php");

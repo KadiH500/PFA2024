@@ -39,10 +39,13 @@ include "connexion.php";
                     // Update user data in the database
                     $updateStmt = $conn->prepare("UPDATE users SET  name = ?, ville = ?, adresse = ?, codepostal = ?, phone = ? WHERE id = ?");
                     $updateStmt->execute([ $newName, $newVille, $newAdresse, $newCodePostal, $newPhone, $userId]);
-
-                    // Redirect to the profile page after updating
-                    header("Location: profil1.php");
-                    exit();
+                    $updateStmt2= $conn->prepare("UPDATE signup SET username= ?,email= ? WHERE id =?");
+                    $updateStmt2->execute([ $newUsername, $newEmail, $userId]);
+                    if ($updateStmt && $updateStmt2) {
+                        echo '<script>alert("Updated with success!");</script>';
+                        // Redirect to the profile page after updating
+                        header("Location: profil1.php");
+                        exit();}
                 }
                 else if(isset( $_POST["pwbtn"])) {
                     if (isset($_POST['password1']) && isset($_POST['password2'])) {
