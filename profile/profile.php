@@ -50,4 +50,37 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
     header("Location: ../login_signup/losi.php");
     exit();
 }
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['password1']) && isset($_POST['password2'])) {
+        $password1 = $_POST['password1'];
+        $password2 = $_POST['password2'];
+        $passwordog = $_POST['ogpassword'];
+        $stmt = $conn->prepare("SELECT password FROM signup WHERE username = ?");
+        $stmt->bindParam(1, $_SESSION['username']);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $hashedPasswordFromDB = $result['password'];
+
+
+        if (($password1 === $password2) && (password_verify($passwordog, $hashedPasswordFromDB))){
+            // Passwords match, update the password in the database
+            $hashedPassword = password_hash($password1, PASSWORD_DEFAULT);
+            $updateStmt = $conn->prepare("UPDATE signup SET password = ? WHERE id = ?");
+            $updateStmt->bindParam(1, $hashedPassword);
+            $updateStmt->bindParam(2, $userId);
+            $updateStmt->execute();
+            echo '<script>alert("Password updated successfully!");</script>'
+        } else if($password1 !== $password2 ) {
+            echo '<script>alert("Passwords do not match!");</script>';
+        }
+        else{
+            echo '<script>alert("please confirm your password!");</script>';
+        }
+    }
+}
+ else {
+header("Location: ../login signup/losi.php");
+exit();
+}
 ?>
