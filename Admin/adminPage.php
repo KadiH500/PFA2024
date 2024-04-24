@@ -5,42 +5,8 @@ require '../main/includes/dbh.inc.php';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./admin.css"/>
     <title>Admin Dashboard</title>
-    <style>
-        /* Simple styles for the admin dashboard */
-        button {
-            all: unset; /* Remove default button styles */
-            box-sizing: border-box; /* Ensure consistent box sizing */
-        }
-        .dashboard {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .dashboard button {
-            padding: 12px 20px; /* Consistent padding */
-            font-size: 16px; /* Uniform font size */
-            cursor: pointer;
-            background-color: #3498db; /* Blue background */
-            color: white; /* White text */
-            border: none; /* No border */
-            border-radius: 5px; /* Rounded corners */
-            transition: background-color 0.3s; /* Smooth transition */
-        }
-        .dashboard button:hover {
-            background-color: #2980b9;
-        }
-        .flower-list {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-        .commande-list {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-    </style>
 </head>
 <body>
 <nav class="navbar">
@@ -55,16 +21,27 @@ require '../main/includes/dbh.inc.php';
     <div class="dashboard">
         <!-- Form to add a flower -->
         <form action="./includes/add_flower.php" method="POST">
+            <label for="nom">Nom Flower: </label>
+            <input type="text" name="nom" id="nom"></input></br>
+            <label for="qte">qte: </label>
+            <input type="text" name="qte" id="qte"></input></br>
+            <label for="cat">Cat Flower: </label>
+            <input type="text" name="cat" id="cat"></input></br>
+            <label for="prix">Prix Flower: </label>
+            <input type="text" name="prix" id="prix"></input></br>
             <button type="submit">Add Flower</button>
         </form>
 
         <!-- Form to delete the last flower -->
         <form action="./includes/delete_flower.php" method="POST">
+</br>
             <button type="submit">Delete Last Flower</button>
         </form>
 
         <!-- Button to show flowers, triggers a page reload -->
-        <button onclick="window.location.reload();">Show Flowers</button>
+        
+        </br>
+        <button onclick="window.location.reload();">Refresh Flowers</button>
     
 
     <!-- Section to display the list of flowers -->
@@ -78,7 +55,9 @@ require '../main/includes/dbh.inc.php';
         }
         ?>
     </div>
-    <button onclick="window.location.reload();">les commandes:</button>
+    
+    </br>
+    <button onclick="window.location.reload();">Refresh orders:</button>
     <div class="commande-list">
         <?php
         $query2 = "SELECT * FROM commande ";

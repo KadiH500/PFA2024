@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 5%;
+  }
+  
+  
+  .navbar {
+    background-color:rgb(255, 255, 255);
+    position: relative;
+    top:0;
+    z-index: 60;
+    height: 120px;
+    width: 101%;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width:500px;
+    height: 70px;
+    margin-top: 155px;
+  }
+  /* General CSS */
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Rubik;
+    text-align: center;
+  }
+  /* dashboard*/
+  .dashboard {
+    padding: 20px; /* Consistent padding */
+    max-width: 800px; /* Max width to avoid stretching */
+    margin: 20px auto; /* Center the dashboard */
+    background-color: white; /* White background for dashboard */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .dashboard h2 {
+    font-size: 24px; /* Larger font size for section titles */
+    margin-bottom: 10px; /* Margin below titles */
+  }
+  
+  .dashboard button,
+  .dashboard input {
+    padding: 10px; /* Consistent padding */
+    font-size: 16px; /* Uniform font size */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .dashboard button {
+    cursor: pointer; /* Pointer cursor for buttons */
+    background-color: #f8dde8; /* Blue background */
+    color: white; /* White text */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  .dashboard button:hover {
+    background-color: #dfb0c3; /* Darker blue on hover */
+  }
+  
+  .dashboard .form-group {
+    margin-bottom: 15px; /* Spacing between form elements */
+  }
+  
+  .dashboard label {
+    display: block; /* Display labels as block elements */
+    font-weight: bold; /* Bold labels */
+  }
+  
+  .flower-list,
+  .commande-list {
+    padding: 15px; /* Padding for content lists */
+    background-color: #fcfafb; 
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px; /* Spacing between sections */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 600px) {
+    .dashboard {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+  
+    .dashboard button,
+    .dashboard input {
+        padding: 8px; /* Reduced padding for smaller screens */
+        font-size: 14px; /* Smaller font for smaller screens */
+    }
+  }
