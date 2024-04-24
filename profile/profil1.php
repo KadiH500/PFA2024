@@ -59,11 +59,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
       <div class="container-nav">
         <ul class="menu">
           <li onclick="smoothScroll('#home')"> <a href="../user/HomePage.php">Acceuil</a></li>
-          <li onclick="smoothScroll('#anniversaire')"> <a href="##">Anniversaire</a></li>
-          <li onclick="smoothScroll('#valentine')"> <a href="##">Saint valentin</a></li>
-          <li onclick="smoothScroll('#mariage')"> <a href="##">Mariage</a></li>
-          <li onclick="smoothScroll('#dryflowers')"> <a href="##">Fleurs séchées</a></li>
-          <li onclick="smoothScroll('#decoration')"> <a href="##">Décoration</a></li>
+          
           <li>
             <a href="logout.php" class="btn btn-primary">Log Out</a></li>
         </ul>
