@@ -29,19 +29,19 @@ require '../main/includes/dbh.inc.php';
             <input type="text" name="cat" id="cat"></input></br>
             <label for="prix">Prix Flower: </label>
             <input type="text" name="prix" id="prix"></input></br>
-            <button type="submit">Add Flower</button>
+            <button type="submit">Ajouter Fleur</button>
         </form>
 
         <!-- Form to delete the last flower -->
         <form action="./includes/delete_flower.php" method="POST">
 </br>
-            <button type="submit">Delete Last Flower</button>
+            <button type="submit">Supprimer la dernière Fleur</button>
         </form>
 
         <!-- Button to show flowers, triggers a page reload -->
         
         </br>
-        <button onclick="window.location.reload();">Refresh Flowers</button>
+        <button onclick="window.location.reload();">Mise A Jour Fleurs</button>
     
 
     <!-- Section to display the list of flowers -->
@@ -51,20 +51,20 @@ require '../main/includes/dbh.inc.php';
         $stmt = $pdo->query($query);
 
         while ($flower = $stmt->fetch()) {
-            echo "<div>{$flower['name']}</div>";
+            echo "<div>Id: {$flower['id']} | Nom: {$flower['name']} | Qte: {$flower['qte']} | Prix: {$flower['price']}Dt </div>";
         }
         ?>
     </div>
     
     </br>
-    <button onclick="window.location.reload();">Refresh orders:</button>
+    <button onclick="window.location.reload();">Mise A Jour Commandes</button>
     <div class="commande-list">
         <?php
         $query2 = "SELECT * FROM commande ";
         $stmt2 = $pdo->query($query2);
 
         while ($commande = $stmt2->fetch()) {
-            echo "<div>la commande: {$commande['id']} de date: {$commande['datetime']}</div>";
+            echo "<div>la Commande: {$commande['id']} De Date: {$commande['datetime']}</div>";
         }
         ?>
     </div>
